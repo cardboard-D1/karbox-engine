@@ -1,5 +1,3 @@
-import math
-
 class LineLow:
 
 
@@ -218,7 +216,7 @@ class Stage:
             self, starting_x: int, starting_y: int,
             finish_x: int, finish_y: int, char: str,
             ansi: str=""):
-        if math.fabs(finish_y-starting_y) < math.fabs(finish_x - starting_x):
+        if abs(finish_y-starting_y) < abs(finish_x - starting_x):
             if starting_x > finish_x:
                 path = LineLow(finish_x, finish_y, starting_x, starting_y)
             else:
