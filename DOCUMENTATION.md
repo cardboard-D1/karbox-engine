@@ -256,14 +256,117 @@ root = Stage(10, 10) # stage's variable is "root"
 my_group = Group(root)
 ```
 
+Currently, the group's image buffer is empty.
+There are three ways to give it a texture.
 
+## Adding Texture to a Group
 
+This functions are methods of the Group class, so prefix them with the variable you assigned `Group` with:
 
+`my_group.function()`
 
+### From the Stage
 
+Copies contents of a specified area of `selected_layer` of a stage into group's image buffer.
 
+- **Syntax:** `define_pos(<starting_x*>, <starting_y*>, <finish_x*>, <finish_y*>)`
 
+### From a Plain txt File
 
+Copies contents of a text file into group's image buffer.
 
+- **Syntax:** `load_file(<filepath*>)`
+- Where `<filepath>` is file's path starting from your python file's path
 
+### From Karbox Formatted Files
 
+Use this if you want to import a file created by the group function `save(...)`.
+This decodes the file into color texture which is stored in group's image buffer.
+
+- **Syntax:** `load_file_color(<filepath*>)`
+
+## Group Functions
+
+### Paste
+
+Just slaps that group's image buffer onto the stage (at the `selected_layer`).
+This paste has no relation with any group's attributes or buffers.
+
+- **Syntax:** `paste(<x*>, <y*>, <ansi>)`
+- Use `<ansi>` only if you imported the texture from a plain txt
+
+### Moving by Values
+
+Moves the group by specified x and y.
+Changes group's position attributes.
+
+- **Syntax:** `move(<x, default: 0>, <y, default: 0>)`
+
+### Moving to a Position
+
+Moves the group to a specified position.
+Changes groups's position attributes.
+
+- **Syntax:** `set_pos(<x*>, <y*>)`
+
+### Touching
+
+Returns `True` or `False` depending on if the group touches an other specified group.
+
+- **Syntax:** `my_group.touching(another_group)`
+- Added `my_group.` for a better measure the reader will understand this
+
+### Touching #2
+
+Same as previous, but written differently.
+
+- **Syntax:** `touching_groups(first_group, second_group)`
+- This one **is not** prefixed with group's name.
+
+## Group attributes
+
+These are variables of groups.
+
+### Position
+
+It's a tuple with two elements.
+The first element being **x position**
+and the second element **y position**.
+This position marks the top left corner of the group.
+
+- **To access:**
+  - `my_group.pos` for the tuple itself
+  - `my_group.pos[0]` for x position
+  - `my_group.pos[1]` for y position
+
+### End Position
+
+Same as position, but marks the bottom right of the group.
+
+- **To access:**
+  - `my_group.pos_end` for the tuple itself
+  - `my_group.pos_end[0]` for x position
+  - `my_group.pos_end[1]` for y position
+
+### Size
+
+It's a tuple with two elements.
+The first element being **width**
+and the second element **height**.
+
+- **To access:**
+  - `my_group.size` for the tuple itself
+  - `my_group.size[0]` for x position
+  - `my_group.size[1]` for y position
+
+### Image Buffer
+
+This is the image buffer of a group.
+
+- **To access:** `my_group.image`
+
+### Stage
+
+The stage object is stored here
+
+- **To access:** `my_group.stage`
