@@ -206,6 +206,58 @@ Triggers an input action at the specified position
 - If `<input_stay>` is set to `True`, the input text stays visible after the user presses enter
 - `<label_stay>` is the same thing, but for the label
 
+## Stage's attributes
+
+A stage has attributes/variables when you assign it to a variable.
+There is a few of them:
+
+### Image
+
+This is the buffer of a stage, here are stored all layer names in an `array` and textures assigned to them.
+
+- **To access:** `my_stage.image`
+
+### Stage Width
+
+- **To access:** `my_stage.width`
+
+### Stage Height
+
+- **To access:** `my_stage.height`
+
+### Selected Layer
+
+It has been talked about previously in this documentation.
+
+- **To access:** `my_stage.selected_layer`
+
+# Groups
+
+Do you want to import a texture from a `.txt` file and use it in your project? 
+Maybe you want to take a bigger chunk of the stage and move it around? 
+Do you need touch detection between two "sprites"? (For example between a cursor and a button)
+
+Use groups for this!
+
+## What is a group?
+
+In `karbox`, group is a chunk of a stage layer stored in a seperate buffer.
+You can import plain `.txt` files into them or in a special color format for karbox.
+They can be moved by a position or to a position.
+And it's possible to detect collision between two groups.
+It is assigned to a variable and accepts commands, functions.
+
+## Initalizing a group
+
+To initalize a group to a variable, assign `Group()` to a variable and specify the stage's variable. For example:
+
+```python
+root = Stage(10, 10) # stage's variable is "root"
+my_group = Group(root)
+```
+
+
+
 
 
 
