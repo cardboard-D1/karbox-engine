@@ -230,7 +230,7 @@ class Stage:
         for i in range(len(path.x)):
             self.insert_(path.x[i], path.y[i], char, ansi=ansi)
 
-    def getFromPos(self, x: int, y: int):
+    def get_from_pos(self, x: int, y: int):
         try:
             return self.image[self.selected_layer][y][x]
         except:
