@@ -183,7 +183,28 @@ root.new_layer("A Sprite")
 ~~~~~~~~~~~~
 ```
 
+### Line
 
+Draws a line with the specified starting position and finish position
+
+- **Syntax:** `line(<starting_x*>, <starting_y*>, <finish_x*>, <finish_y*>, <char*>, <ansi>)`
+
+### Get from a Position
+
+Returns an element at the `selected_layer` at the specified position
+
+- **Syntax:** `get_from_pos(<x*>, <y*>)`
+
+### Input at a Position
+
+Triggers an input action at the specified position
+
+- **Syntax:** `input_at(<x*>, <y*>, <ansi>, <label>, <label_ansi, default:90(Gray)>, <input_stay, default: True>, <label_stay, default: True>)`
+- `<ansi>` - Applies to the input text
+- `<label>` - Text shown bellow the input text
+- `<label_ansi>` - Applies to the label text
+- If `<input_stay>` is set to `True`, the input text stays visible after the user presses enter
+- `<label_stay>` is the same thing, but for the label
 
 
 
