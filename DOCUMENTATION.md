@@ -356,8 +356,8 @@ and the second element **height**.
 
 - **To access:**
   - `my_group.size` for the tuple itself
-  - `my_group.size[0]` for x position
-  - `my_group.size[1]` for y position
+  - `my_group.size[0]` for width
+  - `my_group.size[1]` for width
 
 ### Image Buffer
 
