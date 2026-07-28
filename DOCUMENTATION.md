@@ -241,7 +241,7 @@ Use groups for this!
 
 ## What is a group?
 
-In `karbox`, group is a chunk of a stage layer stored in a seperate buffer.
+In `karbox`, group is a chunk of a stage layer, or txt file, stored in a seperate buffer.
 You can import plain `.txt` files into them or in a special color format for karbox.
 They can be moved by a position or to a position.
 And it's possible to detect collision between two groups.
