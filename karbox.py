@@ -285,7 +285,7 @@ class Group:
             self.image.append([])
             for X in range(x1, x2+1):
                 self.image[-1].append(
-                    self.Stage.image[self.stage.selected_layer][Y][X]
+                    self.stage.image[self.stage.selected_layer][Y][X]
                 )
 
         self.pos = (x1, y1)
