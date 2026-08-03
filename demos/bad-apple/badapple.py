@@ -6,6 +6,7 @@ content = open("bad-apple-highres.txt", "r").read().splitlines()
 
 # Read metadata and create Stage "tmp"
 # It will be used temporarly for reading frames
+# And then for displaying the animation
 
 metadata = content[0].split()
 tmp = Stage(
@@ -24,7 +25,7 @@ for element in range(len(content) - 1):
     for character in range(len(content[element]) - 1):
         tmp.insert_(
             x = character,
-            y = (element+1) % tmp.height,
+            y = element % tmp.height,
             char = content[element][character]
         )
     if (element+1) % tmp.height == 0:
@@ -43,4 +44,3 @@ for frame in frames:
     frame.paste(0, 0)
     tmp.refresh()
     time.sleep(period)
-    time.sleep(0)
