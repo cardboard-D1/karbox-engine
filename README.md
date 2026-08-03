@@ -17,6 +17,11 @@ Continuation of a Python terminal game engine, Karton, written from scratch and 
   - moving by x and/or y
   - moving to a position
   - touch detection
+## Bad Apple Demo
+This is how to run it:
+```bash
+python /demos/bad-apple/badapple.py
+```
  ---
  For now this engine is pretty basic. To make the image above i used two rectangle and one text function, `sys.get_terminal_size()` to make it fill the whole terminal.
 
