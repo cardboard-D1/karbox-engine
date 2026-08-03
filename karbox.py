@@ -98,7 +98,7 @@ class Stage:
             pass
             
     def refresh(self):
-        print("\033c", end="")
+        print("\033c", end="", flush = False)
 
         for layer in self.image:
             if layer[0] != ".":
@@ -107,11 +107,11 @@ class Stage:
                         if self.image[layer][Y][X] != " ":
                             print(f"\033[{Y+1};{X+1}H" 
                                   + self.image[layer][Y][X],
-                                  end="")
+                                  end="", flush = False)
                         else:
-                            print(f"\033[{Y+1};{X+1}H", end="")
-            print("\033[0;0H", end="")
-        print(f"\033[{self.height + 1};0H", end="")
+                            print(f"\033[{Y+1};{X+1}H", end="", flush = False)
+            print("\033[0;0H", end="", flush = False)
+        print(f"\033[{self.height + 1};0H", end="", flush = True)
 
     def debug_layer(self):
         for Y in range(self.height):
