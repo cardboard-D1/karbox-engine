@@ -41,6 +41,6 @@ period = 1 / FPS
 
 for frame in frames:
     tmp.fill(0, 0, tmp.width - 1, tmp.height - 1, " ")
-    frame.paste(0, 0)
+    frame.paste(0, 0, ansi = "30;47")
     tmp.refresh()
     time.sleep(period)
